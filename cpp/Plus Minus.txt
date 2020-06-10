@@ -1,0 +1,10 @@
+void plusMinus(vector<int> arr) {
+    int p = 0, n = 0, z = 0;
+    std::cout << std::setprecision(6) << std::fixed;
+    for(int i = 0; i < arr.size(); i++) {
+        if(arr[i] > 0) p++;
+        else if(arr[i] < 0) n++;
+        else z++;
+    }
+    cout << (float)p/arr.size() << "\n" << (float)n/arr.size() << "\n" << (float)z/arr.size() << endl;
+}

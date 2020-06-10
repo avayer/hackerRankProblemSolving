@@ -1,0 +1,20 @@
+vector<int> compareTriplets(vector<int> a, vector<int> b) {
+    int al = 0, bb = 0; 
+    if(a[0] > b[0]){
+        al++;
+    }else if(a[0] < b[0]) {
+        bb++;
+    }
+    if(a[1] > b[1]){
+        al++;
+    }else if(a[1] < b[1]) {
+        bb++;
+    }
+    if(a[2] > b[2]){
+        al++;
+    }else if(a[2] < b[2]) {
+        bb++;
+    }
+    
+    return vector<int>{al, bb};
+}

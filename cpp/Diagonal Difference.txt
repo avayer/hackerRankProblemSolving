@@ -1,0 +1,10 @@
+int diagonalDifference(vector<vector<int>> arr) {
+    int d1 = 0, d2 = 0, i = 0;
+    for(i = 0;i < arr.size();i++) {
+        d1 = d1 + arr[i][i];
+        d2 += arr[i][arr.size() - i - 1];
+        cout<<arr[i][i]<< endl;
+    }
+    cout << d1 << " " << d2 << endl;
+    return abs(d1 - d2);
+}

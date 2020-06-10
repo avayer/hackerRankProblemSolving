@@ -1,0 +1,9 @@
+vector<int> gradingStudents(vector<int> grades) {
+    for(int i = 0;i < grades.size();i++) {
+            int x = grades[i] / 5;
+            if((((x+1) * 5) - grades[i] < 3) && (x + 1) * 5 >= 40) {
+                grades[i] = (x + 1) * 5;
+            }
+    }
+    return grades;
+}

@@ -1,0 +1,8 @@
+int birthdayCakeCandles(vector<int> ar) {
+sort(ar.begin(), ar.end());
+int r = 0;
+for(int i = 0; i < ar.size(); i++){
+    if(ar[ar.size() - 1] == ar[i]) r++;
+}
+    return r;
+}

@@ -1,0 +1,17 @@
+void staircase(int n) {
+    int nos = n - 1;
+    for(int i = 1;i <= n;i++) {
+    int j = 1;
+    while(j <= nos) {
+        cout << " ";
+        j++;
+    }
+    int noh = 1;
+    while(noh <= i){
+        cout << "#";
+        noh++;
+    }
+    printf("\n");
+    nos--;
+    }
+}
