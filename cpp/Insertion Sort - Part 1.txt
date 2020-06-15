@@ -1,0 +1,21 @@
+// Complete the insertionSort1 function below.
+void insertionSort1(int n, vector<int> arr) {
+    int ele = arr[arr.size() - 1];
+    int i = arr.size() - 2;
+    while(i >= 0) {
+        if(arr[i] <= ele) {
+            arr[i+1] = ele;
+            printArray(arr);
+            break;
+        } else {
+            arr[i+1] = arr[i];
+            printArray(arr);
+        }
+        i--;
+        if(i < 0) {
+            arr[0] = ele;
+            printArray(arr);
+            break;
+        }
+    }
+}

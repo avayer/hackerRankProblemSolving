@@ -1,0 +1,25 @@
+/*
+ * Complete the pageCount function below.
+ */
+int pageCount(int n, int p) {
+    /*
+     * Write your code here.
+     */
+    int c = 0;
+    if(p==1 || n==p || (n%2==1 && n-1==p)) {
+        return 0;  
+    } else {
+        if(p <= n/2) {
+            c = p/2;
+        } else {
+            if(p==n-1) {
+                return 1;
+            }
+            c =  (n-p)/2;
+        }
+    }
+    return c;
+    // int a = p/2;
+    // int b = n/2 - p/2;
+    // return (a>b)?b:a;
+}

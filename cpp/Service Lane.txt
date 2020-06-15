@@ -1,0 +1,16 @@
+// Complete the serviceLane function below.
+vector<int> serviceLane(int n,vector<int> w, vector<vector<int>> cases) {
+    vector<int> res;
+    for(int i = 0; i < cases.size(); i++) {
+        int min = INT_MAX;
+       //cout << cases[i][0] << ", " <<  cases[i][1] << endl;
+        for(int k = cases[i][0]; k <= cases[i][1]; k++) {
+            cout << min << " " << w[i] << endl;
+            if(w[k] <= min){
+                min = w[k];
+            }
+        }
+        res.push_back(min);
+    }
+    return res;
+}

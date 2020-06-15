@@ -1,0 +1,17 @@
+// Complete the breakingRecords function below.
+vector<int> breakingRecords(vector<int> scores) {
+    int min = scores[0];
+    int max = scores[0];
+    int l = 0, m = 0;
+    for(int i = 0; i < scores.size(); i++) {
+        if(scores[i] > max) {
+            m++;
+            max = scores[i];
+        }
+        if(scores[i] < min) {
+            l++;
+            min = scores[i];
+        }
+    }
+    return vector<int>{m, l};
+}

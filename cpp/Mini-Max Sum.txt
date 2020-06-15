@@ -1,0 +1,9 @@
+// Complete the miniMaxSum function below.
+void miniMaxSum(vector<int> arr) {
+    int64_t x = 0;
+    sort(arr.begin(), arr.end());
+    for(int i = 0; i < arr.size(); i++){
+        x += arr[i];
+    }
+    cout << (x - arr[arr.size() - 1]) << " " << x - arr[0] << endl;
+}
