@@ -1,0 +1,25 @@
+/*
+ * Complete the getMoneySpent function below.
+ */
+int getMoneySpent(vector<int> k, vector<int> d, int b) {
+    /*
+     * Write your code here.
+     */
+     int max = INT_MIN;
+    for(int i = 0; i < k.size(); i++) {
+        for(int j = 0; j < d.size(); j++) {
+            int sum = 0;
+            if(k[i] + d[j] <= b) {
+                sum = k[i] + d[j];
+                if(max < sum) {
+                    max = sum;
+                }
+            }
+        }   
+    }
+    if(max == INT_MIN) {
+        return -1;
+    } else {
+        return max;
+    }
+}

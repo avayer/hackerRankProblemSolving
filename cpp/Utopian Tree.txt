@@ -1,0 +1,14 @@
+// Complete the utopianTree function below.
+int utopianTree(int n) {
+    int h = 1;
+    bool summer = false;
+    for(int i = 1; i <= n; i++ ) {
+        if(summer) {
+            h++;
+        } else {
+            h *= 2;
+        }
+        summer = !summer;
+    }
+    return h;
+}

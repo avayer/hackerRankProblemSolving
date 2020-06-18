@@ -1,0 +1,4 @@
+int hurdleRace(int k, vector<int> h) {
+    sort(h.begin(), h.end());
+    return (h[h.size()-1] < k) ? 0 : h[h.size()-1] - k;
+}

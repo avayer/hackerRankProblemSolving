@@ -1,0 +1,44 @@
+// Complete the formingMagicSquare function below.
+int formingMagicSquare(vector<vector<int>> s) {
+    
+    int ans = INT_MAX;
+    vector<vector<vector<int>>> m = { 
+        {
+            {4, 9, 2}, {3, 5, 7}, {8, 1 ,6}
+        },
+        {
+            {8, 3, 4}, {1, 5, 9}, {6, 7, 2}
+        }, 
+        {
+            {6, 7, 2}, {1, 5, 9}, {8, 3, 4}
+        },
+        {
+            {6, 1, 8}, {7, 5, 3}, {2, 9, 4}
+        },
+        {
+            {8, 1, 6}, {3, 5, 7}, {4, 9, 2}
+        },
+        {
+            {2, 7, 6}, {9, 5, 1}, {4, 3, 8}
+        }, 
+        {
+            {2, 9, 4}, {7, 5, 3}, {6, 1, 8}
+        },
+        {
+            {4, 3, 8}, {9, 5, 1}, {2, 7, 6}
+        }
+    };
+    for(int ms = 0; ms < 8; ms++) {
+        int cost = 0;
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                if(s[i][j] != m[ms][i][j]) {
+                    cost += abs(s[i][j] - m[ms][i][j]);
+                }
+            }
+        }
+        cout << ans << cost << endl;
+        if(ans > cost ) ans = cost;
+    }
+    return ans;
+}
