@@ -1,0 +1,10 @@
+// Complete the beautifulDays function below.
+int beautifulDays(int start, int end, int k) {
+    int ans = 0;
+    for(int i = start; i <= end; i++) {
+        if((i-reverse(i))%k == 0) {
+            ans++;
+        }
+    }
+    return ans;
+}
