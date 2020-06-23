@@ -1,0 +1,15 @@
+// Complete the lonelyinteger function below.
+int lonelyinteger(vector<int> a) {
+    map<int, int> hmap; 
+    int ans = 0;
+    for(int i=0; i<a.size(); i++) {
+        hmap[a[i]]++;
+    }
+     for (auto i : hmap) {
+         if(i.second==1) {
+             ans = i.first;
+             break;
+         }
+     }
+    return ans;
+}

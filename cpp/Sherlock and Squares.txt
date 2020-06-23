@@ -1,0 +1,8 @@
+// Complete the squares function below.
+int squares(int a, int b) {
+    int ans = 0;
+    for(int i = ceil(sqrt(a)); i<=floor(sqrt(b)); i++) {
+        ans++;
+    }
+    return ans;
+}
