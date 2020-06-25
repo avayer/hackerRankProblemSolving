@@ -1,0 +1,20 @@
+// Complete the kaprekarNumbers function below.
+void kaprekarNumbers(int p, int q) {
+    bool y = false;
+    for(int i=p; i<=q; i++) {
+        if(i==1) {
+            cout << 1 << " ";
+            continue;
+        }
+        long long sq = ( ( long long ) i) * ( ( long long ) i);
+        string st = to_string(sq);
+        int len = st.length();
+        if(len>1) {
+           if(stoll(st.substr(0, len/2)) + stoll(st.substr(len/2, len))==i){
+                y = true;
+                cout << i << " ";
+            }
+        }
+    }
+    if(!y) cout << "INVALID RANGE";
+}
