@@ -1,0 +1,23 @@
+string remove_s(string b) {
+    string s = "";
+    bool has_ = false;
+    for(int i=0; i<b.length(); i++) {
+        if(b[i]=='_') {
+            has_=true;
+            continue;
+        }
+        s+=b[i];
+    }
+    sort(s.begin(), s.end()); 
+    return (has_)? s : b;
+}
+// Complete the happyLadybugs function below.
+string happyLadybugs(string b) {
+    string s = remove_s(b);
+    for(int i=0; i<s.length(); i++) {
+        if(s[i-1]!=s[i] && s[i+1]!=s[i]) {
+            return "NO";
+        }
+    }
+    return "YES";
+}
