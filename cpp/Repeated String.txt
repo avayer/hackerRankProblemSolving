@@ -1,0 +1,19 @@
+int occOfA(string s, int l) {
+    int c = 0;
+    for (int i = 0; i<l; i++) {
+        if(s[i]=='a') c++;
+    }
+    return c;
+}
+// Complete the repeatedString function below.
+long repeatedString(string s, long n) {
+    long ans = 0;
+    long c = occOfA(s, s.length());
+    if(n%s.length()==0) {
+        return n/s.length() * c;
+    } else {
+        long e = n%s.length();
+        return n/s.length() * c + occOfA(s,e);
+    }
+    return ans;
+}

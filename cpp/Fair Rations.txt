@@ -1,0 +1,12 @@
+// Complete the fairRations function below.
+string fairRations(vector<int> b) {
+    int ans = 0;
+    for(int i=0; i<b.size()-1; i++) {
+         if(b[i]%2!=0) {
+            b[i+1]++;
+            b[i]++;
+            ans+=2;
+        }
+    }
+    return (b[b.size()-1]%2!=0)?"NO":to_string(ans);
+}
